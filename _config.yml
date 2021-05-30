@@ -23,7 +23,7 @@ url: "https://cs161.org" # the base hostname & protocol for your site, e.g. http
 
 # Build settings
 markdown: kramdown
-theme: architect
+theme: jekyll-theme-architect
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

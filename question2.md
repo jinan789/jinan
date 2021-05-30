@@ -1,5 +1,5 @@
 ---
-title: 'Question 2: Spica'
+title: 'Question 2: Spicaaaaaaa'
 nav_order: 30
 ---
 

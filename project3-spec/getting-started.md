@@ -1,0 +1,49 @@
+---
+title: Getting Started
+nav_order: 3
+---
+
+# Getting Started
+
+Your task is to find seven vulnerabilities in the UnicornBox servers.  When you
+successfully execute an exploit, the status entry on your scoreboard will change
+from 0 to a timestamp, to indicate that you have received a flag. Your goal is
+to collect all seven flags.
+
+**If you are working with a partner, you need to acquire each flag on your own
+server to receive credit for it.**
+
+All your exploits will be done through a web browser. We strongly recommend
+Firefox or Chrome. To get started, open <https://proj3.cs161.org> and log in
+with your Berkeley account.
+
+On this splash page, you can view your progress and reset the server (see
+below). Note that all the vulnerabilities will be at the vulnerable server
+<https://proj3.cs161.org/site>---there are no flags on the splash page.
+
+## Writeup
+
+Each group must submit writeup--two pages maximum, please. For each of **flags
+3--7 only**, include a brief description (2--3 sentences) of how you acquired
+the flag, and a suggestion (a line of code or 2--3 sentences) for how to protect
+against your exploit.
+
+## Grading & Deliverables
+
+- 70 points for finding exploits (10 points for each flag). You do not need to
+  submit anything, since flags are automatically registered on the server.
+
+- 30 points for the writeup (6 points for each of flags 3--7). Submit a writeup
+  to Gradescope, and remember to add your partner if you worked in a group.
+
+## Additional Notes
+
+- The difficulty rating of each flag is based on students' experience from past
+  semesters. You might find some of the hard-rated flags easy, and some of the
+  easy-rated flags hard. Feel free to work on them in any order you choose.
+
+- In case you break the vulnerable server beyond repair, you can reset the
+  database used by the server and clear all stored files.  Resetting will not
+  clear your scoreboard progress.
+
+- Please do not DoS our server. None of the exploits require brute-force.

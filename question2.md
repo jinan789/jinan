@@ -1,4 +1,5 @@
 ---
+layout: default1
 title: 'Question 2: Spica'
 nav_order: 30
 ---

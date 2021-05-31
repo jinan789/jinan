@@ -1,4 +1,5 @@
 ---
+layout: default1
 title: Story
 nav_order : 5
 ---

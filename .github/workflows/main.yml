@@ -21,7 +21,7 @@ jobs:
         with:
           source-directory: '_site'
           destination-github-username: 'jinan789'
-          destination-repository-name: 'jinan2'
+          destination-repository-name: 'jinan2/proj3'
           user-email: jinan@berkeley.edu
           commit-message: Updated site from jinan repo
           target-branch: gh-pages

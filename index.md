@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default1
 title: Exploiting Memory Vulnerabilities
 nav_exclude: true
 ---
